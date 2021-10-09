@@ -1,0 +1,27 @@
+
+.click
+{
+  position: relative;
+  top: 0%;
+  margin: auto;
+  left: 1%;
+
+}
+.next , .before
+{
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 1s;
+
+}
+
+
+.before:hover
+{
+  color: white !important;
+}
+.next:hover
+{
+  color: white !important;
+}
+

@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div class="row">
+
+
+
+    <div class="col-md-4">
+
+      <img class="w-100" [src]="imgPrefix+pepleDetails?.profile_path" alt="">
+      <div class="vote position-absolute">{{pepleDetails?.popularity}}</div>
+
+    </div>
+    <div class="col-md-8">
+
+      <h2>{{pepleDetails?.name}}</h2>
+
+      <h3 class="pt-2">
+        <p class="d-inline">{{ pepleDetails?.birthday }}</p>
+      </h3>
+      <h4 class="pt-2">
+        <p class="d-inline">{{ pepleDetails?.place_of_birth }}</p>
+      </h4>
+
+
+      <p class="text-muted py-2">{{pepleDetails?.biography}}</p>
+
+
+
+      <!-- <h6>{{ linkPrefix  }}</h6> -->
+
+<!--
+      <iframe width="560" height="250" src="" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> -->
+
+    </div>
+
+  </div>
+</div>

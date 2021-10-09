@@ -1,0 +1,131 @@
+<div class="container-fluid py-2">
+
+
+    <div class="input-group p-3 w-75 m-auto">
+        <input type="text" placeholder="Search about.. " [(ngModel)]='term' class="form-control bg-transparent" name="" id="">
+        <div class="input-group-append">
+          <button class="btn btn-outline-primary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+    </div>
+
+<div class="row">
+
+    <div class="col-md-4 py-5">
+
+        <div class="brdr w-25 mb-3"></div>
+
+            <h3 class="pt-2">Trending <br/>  <span class="">Movies</span> <br/> To Watch Righ Now</h3>
+            <br><br><br><br>
+            <p class="secondFontColor py-2">most watched movies by days</p>
+
+            <div class="brdr w-100 mt-3"></div>
+
+        <div class="click">
+          <div class="before pr-2 text-muted btn btn-outline-info mr-3"(click)="before()" ><i class="fas fa-long-arrow-alt-left"></i></div>
+
+          <div class="next pl-2 text-muted btn btn-outline-info ml-3" (click)="next()"><i class="fas fa-long-arrow-alt-right"></i></div>
+        </div>
+
+    </div>
+
+    <!-- Display Content -->
+
+    <div *ngFor="let movie of trendingMovies|search:term" class="col-md-2 py-3 movieContainer">
+        <div [routerLink]="['/moviedetails' , movie?.id]" class="movie">
+
+
+            <img class="w-100" [src]="imgPrefix+movie?.poster_path" alt="">
+            <div class="layer"><i class="fas fa-play-circle"></i></div>
+
+            <div class="vote position-absolute">{{movie?.vote_average}}</div>
+
+        </div>
+        <div class="title ">
+          <h4 class="my-2 h5  ">{{movie?.title}}</h4>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<div class="row py-5">
+
+    <div class="col-md-4 py-5">
+
+        <div class="brdr w-25 mb-3"></div>
+
+            <h3 class="pt-2">Trending <br/>  <span class="">Tv</span><br/> To Watch Righ Now</h3>
+            <br><br><br><br>
+
+            <p class="secondFontColor py-2">most watched movies by days</p>
+
+            <div class="brdr w-100 mt-3"></div>
+
+
+    </div>
+
+    <!-- Display Content -->
+
+    <div *ngFor="let tv of trendingTv|search:term" class="col-md-2 py-3">
+        <div [routerLink]="['/moviedetails', tv?.id]" class="movie" >
+
+            <img class="w-100" [src]="imgPrefix+tv?.poster_path" alt="">
+            <div class="layer"><i class="fas fa-play-circle"></i></div>
+
+            <div class="vote position-absolute">{{tv?.vote_average}}</div>
+        </div>
+
+        <div class="title">
+          <h4 class="my-2 h5">{{tv?.name}}</h4>
+        </div>
+
+    </div>
+</div>
+
+
+      <!-- Movies People -->
+
+
+<div class="row py-5">
+
+  <div class="col-md-4 py-5">
+
+      <div class="brdr w-25 mb-3"></div>
+
+          <h3 class="pt-2">Trending <br/> <span class="">People</span> <br/> To Watch Righ Now</h3>
+          <br><br><br><br>
+
+          <p class="secondFontColor py-2">most watched movies by days</p>
+
+          <div class="brdr w-100 mt-3"></div>
+
+
+  </div>
+
+
+  <div *ngFor="let People of trendingPeople; index as i" class="col-md-2 py-3">
+      <div [routerLink]="['/peopledetails', People?.id]" class="movie" >
+
+          <img class="w-100" [src]="imgPrefix+peoplePic[i]" alt="">
+          <div class="layer"><i class="fas fa-play-circle"></i></div>
+
+          <div class="vote position-absolute">{{People?.popularity}}</div>
+      </div>
+
+      <div class="title">
+        <h4 class="my-2 h5">{{People?.name}} </h4>
+
+      </div>
+
+  </div>
+
+
+  </div>
+</div>
+
+<app-footer></app-footer>

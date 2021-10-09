@@ -1,0 +1,33 @@
+
+.click
+{
+  display: flex;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+.next , .before
+{
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.before:hover
+{
+  color: white !important;
+}
+.next:hover
+{
+  color: white !important;
+}
+span
+{
+  font-size: 30px !important;
+  font-weight: 800 !important;
+}
+
+
+
+
+

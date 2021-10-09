@@ -1,0 +1,12 @@
+.register-link a
+{
+  transition: all 1s !important;
+}
+.register-link a:hover
+{
+  color: #24baef !important;
+}
+form
+{
+  margin-bottom: 150px;
+}

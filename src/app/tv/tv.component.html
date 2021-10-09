@@ -1,0 +1,40 @@
+<section>
+
+  <div class="input-group p-3 w-75 m-auto">
+    <input type="text" placeholder="Search about.. " [(ngModel)]='term' class="form-control bg-transparent" name="" id="">
+    <div class="input-group-append">
+      <button class="btn btn-outline-primary" type="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="container ">
+    <div class="row ">
+
+      <div *ngFor="let tv of tvData|hello:term" class="col-md-3 py-3 ">
+        <div [routerLink]="['/moviedetails', tv.id]"  class="movie ">
+
+          <img [src]="imgPrefix+tv.poster_path" class="w-100">
+          <div class="layer"><i class="fas fa-play-circle"></i></div>
+
+          <div class="vote position-absolute">{{tv?.vote_average}}</div>
+        </div>
+        <div class="title py-2">
+          <h3>{{ tv?.name }}</h3>
+        </div>
+
+      </div>
+
+      <div class="click mb-2 ">
+        <div class="before  text-muted btn btn-outline-info mr-2 "(click)="before()" ><i class="fas fa-long-arrow-alt-left"></i></div>
+
+        <div class="next  text-muted btn btn-outline-info ml-4 " (click)="next()"><i class="fas fa-long-arrow-alt-right"></i></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
+body
+{
+    background-image: linear-gradient(to right,#0f2027,#203a43,#2c5365) !important;
+    color: #fff !important;
+    font-family: 'Montserrat Alternates', sans-serif !important;
+
+}
+a
+{
+  text-decoration: none !important;
+}
+
+.brdr
+{
+    height: 1px;
+    background-color: #a8a8a83d;
+}
+.secondFontColor
+{
+    color: #949cb0 !important;
+}
+.vote
+{
+    background-color: #24baef !important;
+    padding: 5px;
+    top: 0;
+    right: 0;
+    border-radius: 20%;
+    font-size: 17px;
+
+}
+input
+{
+    background-color: transparent !important;
+    color: #Fff !important;
+    border-color: #a8a8a83d !important;
+    width: 50% !important;
+    margin: auto;
+    padding: 25px !important;
+
+}
+.alert
+{
+  width: 50% !important;
+  margin: auto;
+}
+img
+{
+  border-radius: 6%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.movie
+{
+  overflow: hidden;
+  position: relative;
+}
+.layer
+{
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom:  100%;
+  left: 100%;
+  opacity: 1;
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+}
+.movie:hover .layer
+{
+  left:0%;
+  bottom: 0%;
+}
+.layer i
+{
+  font-size: 50px;
+  cursor: pointer;
+  color: white;
+  background-color:#24baef ;
+  border-radius: 50%;
+
+}
+
+.title
+{
+  text-align: center;
+}
+@media (max-width:768px)
+{
+  iframe
+  {
+    width: 420px;
+  }
+  .trailer
+  {
+    padding: 15px 0px;
+  }
+  input
+  {
+    width: 75% !important;
+  }
+  .login , .register
+  {
+    left: 40% !important;
+  }
+}
+
+.click
+{
+  display: flex;
+
+  position: absolute;
+  top: 15%;
+  right: 10%;
+}
+.next , .before
+{
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.before:hover
+{
+  color: white !important;
+}
+.next:hover
+{
+  color: white !important;
+}
+
+.login
+{
+  position: relative;
+  left: 48%;
+  padding: 15px 25px;
+  font-size: 18px;
+
+}
+.register
+{
+  position: relative;
+  left: 48%;
+  padding: 15px 25px;
+  font-size: 18px;
+
+}
+textarea
+{
+  border-color: #a8a8a83d !important;
+}

@@ -1,0 +1,18 @@
+
+input
+{
+  margin-bottom: 15px;
+  width: 75% !important;
+}
+.side
+{
+  background-image: linear-gradient(to right,#0f2027,#203a43,#2c5365) !important;
+  height: 75vh;
+  border-radius: 3%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.content p
+{
+  margin-bottom: 40px;
+}
+

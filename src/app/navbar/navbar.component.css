@@ -1,0 +1,39 @@
+.test
+{
+    color: #24baef !important;
+    font-weight: 900 !important;
+}
+nav
+{
+  background-color: rgba(0,0,0,0.1) !important;
+  margin-bottom: 30px;
+}
+.navbar-brand span
+{
+  color: #24baef;
+  font-size: 25px;
+  font-weight: 600;
+}
+.navbar-brand
+{
+  font-size: 22px;
+  font-weight: 600;
+}
+.navbar-nav .nav-item
+{
+  font-size: 20px;
+  cursor: pointer;
+
+}
+a
+{
+  transition: all 1s ;
+}
+.navbar-nav .nav-item:hover a
+{
+  color: #24baef;
+}
+.out-item:hover .out-link
+{
+  color: white !important;
+}

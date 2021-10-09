@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="row">
+
+
+    <div class="col-md-4">
+      <img class="w-100" [src]="imgPrefix+movieDetials?.poster_path" alt="">
+      <div class="vote position-absolute">{{movieDetials?.vote_average}}</div>
+    </div>
+    <div class="col-md-8">
+
+      <h2>{{movieDetials?.title}}{{movieDetials?.name}}</h2>
+
+      <h3 class="pt-2">
+        <p class="d-inline" *ngIf="movieDetials?.genres[0]">{{ movieDetials?.genres[0].name }}, {{
+          movieDetials?.genres[1].name }}</p>
+      </h3>
+
+
+      <p class="text-muted py-2">{{movieDetials?.overview}}</p>
+
+      <h4>Trailer :</h4>
+      <a class="btn btn-outline-info mb-3" [href]="linkPrefix" target="_blank">Watch now</a>
+
+
+      <!-- <h6>{{ linkPrefix }}</h6> -->
+
+      <!-- <iframe frameborder="0" allowfullscreen="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        title="YouTube video player" width="100%" height="100%"
+        src='{linkPrefix}'
+        id="widget2"></iframe> -->
+
+
+    </div>
+    <div class="col-md-8 py-4">
+
+
+    </div>
+  </div>
+</div>
